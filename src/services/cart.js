@@ -18,15 +18,6 @@ async function deleteItem(userCart, name) {
     userCart.splice(index, 1)
   }
 }
-// Remover um item - diminui um item
-// async function removeItem(userCart, item) {
-  // Transforma o indice Visual do usuario, para indice do backend
-//   const deleteIndex = index - 1
-   // É maior do que zero e se é menor que o tamanho do carrinho
-//   if(index >= 0 && index < userCart.length){
-//     userCart.splice(deleteIndex, 1)
-//   }
-// }
 async function removeItem(userCart, item){
   //1. Encontra o indice do item
   const indexFound = userCart.findIndex((p) => p.name === item.name)
@@ -52,14 +43,13 @@ async function removeItem(userCart, item){
 
 // Cálcular o total
 async function calculateTotal(userCart) {
-  console.log('\n Shoppe cart TOTAL IS: ')
   // REDUCE ele permite pegar algum item interagir com todos os itens como se fosse um for e reduzir aqulilo ao um valor
   const result = userCart.reduce((total, item) => total + item.subtotal(), 0)
-  console.log(`💰 Total: ${result}`)
+
+  return result
 }
 
 async function displayCart(userCart) {
-  console.log('\n Shoppe cart list : ')
 
   userCart.forEach((item, index) => {
     console.log(
