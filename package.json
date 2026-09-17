@@ -1,7 +1,7 @@
 {
   "name": "05-shopee-cart",
-  "version": "1.0.0",
-  "description": "feat(coupons): implement coupon discount system",
+  "version": "1.1.0",
+  "description": "Shopping cart system with coupon discounts and checkout functionality.",
   "main": "main,js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
@@ -9,5 +9,8 @@
   "keywords": [],
   "author": "Elvison",
   "license": "ISC",
-  "type": "module"
+  "type": "module",
+  "dependencies": {
+    "chalk": "^6.0.0"
+  }
 }
